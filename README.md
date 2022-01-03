@@ -25,3 +25,4 @@ Function: Restart And Quit
 Description: 
 As the player dies the end game function in game manager is called the GameOverScene/Scene2 is called which calls another function SceneManager.LoadScene() where active scene from the build index is called and 1 is added to it which calls the next scene that is the game over scene. When the Restart button is pressed the SceneManager.LoadScene() function is called where the active scene from the build index is called and 1 is subtracted to it which calls the game level scene. When the Quit button is pressed the application.quit function is called and the application quits. The score of the player is also displayed on the game over screen.
 
+Trailer link: https://youtu.be/q0IvLKlY4CE
