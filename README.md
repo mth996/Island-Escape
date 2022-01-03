@@ -1,6 +1,6 @@
 # Island-Escape
-An Endless runner game made for PC
-here are the scripts I was responsible
+An Endless runner game made for PC. 
+Here are the scripts I was responsible
 
 Game Object Type: Audio
 
