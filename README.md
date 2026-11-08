@@ -22,7 +22,7 @@ My work focused on supporting the core gameplay loop and player experience throu
 
 The NPC system maintains an initial positional offset from the player and follows the player's movement using interpolated positioning. It also coordinates the NPC's running animation with the game's initial delay and stops the NPC when the player dies.
 
-**Script:** `NPCController.cs`
+**Script:** `Scripts/NPCController.cs`
 
 ### Power-Up Spawning
 
@@ -35,31 +35,31 @@ The power-up manager periodically generates a random gameplay pickup and positio
 
 Spawn positions and distances are randomised to introduce variation during a run.
 
-**Script:** `PowerUpManager.cs`
+**Script:** `Scripts/PowerUpManager.cs`
 
 ### QTE Door Interaction
 
 The QTE door system detects when the player remains within the interaction trigger and allows the door-opening animation to be activated with the Space key. A state flag prevents the same door from being repeatedly opened.
 
-**Script:** `QTE_DoorController.cs`
+**Script:** `Scripts/QTE_DoorController.cs`
 
 ### Endless-Runner Environment Cleanup
 
 To support continuous forward progression, environment objects that have fallen sufficiently far behind the player are destroyed at runtime. Different distance thresholds are used for laboratory and island-ground objects, while the ground count is updated when generated ground sections are removed.
 
-**Script:** `SceneController.cs`
+**Script:** `Scripts/SceneController.cs`
 
 ### Score & Game-Over Flow
 
 The project includes score presentation during gameplay and carries the final score into the game-over screen. The game-over interface provides restart and quit functionality.
 
-**Scripts:** `ScoreManager.cs`, `GameOver.cs`
+**Scripts:** `Scripts/ScoreManager.cs`, `Scripts/GameOver.cs`
 
 ### Audio Timing
 
 Background music begins after the same initial delay used by the player sequence, synchronising the audio with the start of the running section.
 
-**Script:** `AudioManager.cs`
+**Script:** `Scripts/AudioManager.cs`
 
 ## Technical Focus
 
@@ -80,17 +80,25 @@ Background music begins after the same initial delay used by the player sequence
 
 | Script | Responsibility |
 | --- | --- |
-| `NPCController.cs` | NPC follow movement and animation behaviour |
-| `PowerUpManager.cs` | Randomised power-up generation and placement |
-| `QTE_DoorController.cs` | Player-triggered QTE door interaction |
-| `SceneController.cs` | Removes environment sections after the player passes them |
-| `ScoreManager.cs` | Gameplay score handling/display |
-| `GameOver.cs` | Final score, restart and quit flow |
-| `AudioManager.cs` | Delayed background-music playback |
+| `Scripts/NPCController.cs` | NPC follow movement and animation behaviour |
+| `Scripts/PowerUpManager.cs` | Randomised power-up generation and placement |
+| `Scripts/QTE_DoorController.cs` | Player-triggered QTE door interaction |
+| `Scripts/SceneController.cs` | Removes environment sections after the player passes them |
+| `Scripts/ScoreManager.cs` | Gameplay score handling/display |
+| `Scripts/GameOver.cs` | Final score, restart and quit flow |
+| `Scripts/AudioManager.cs` | Delayed background-music playback |
 
 ## Gameplay Trailer
 
 [Watch the Island Escape gameplay trailer on YouTube](https://youtu.be/q0IvLKlY4CE)
+
+## Repository Structure
+
+```text
+Island-Escape/
+├── Scripts/     # Gameplay scripts I implemented (with Unity .meta files)
+└── README.md
+```
 
 ## Repository Note
 
